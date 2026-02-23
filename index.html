@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Online | Enterprise Rehab SEO & Lead Generation Hub</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #001f3f;
+            --accent: #d41414;
+            --text-dark: #1a1a1a;
+            --text-light: #f8f9fa;
+            --glass: rgba(255, 255, 255, 0.95);
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: #eef2f5; 
+            margin: 0; 
+            padding: 0; 
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        /* --- Hero Section --- */
+        header { 
+            background: linear-gradient(135deg, var(--primary) 0%, #003366 100%); 
+            color: var(--text-light); 
+            padding: 100px 20px; 
+            text-align: center; 
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+
+        .main-brand { 
+            font-size: 4.5em; 
+            font-weight: 800; 
+            margin: 0; 
+            letter-spacing: -2px; 
+            text-transform: uppercase;
+        }
+
+        .tagline { 
+            font-size: 1.4em; 
+            margin-top: 20px; 
+            font-weight: 300; 
+            color: #bdc3c7;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-box { margin-top: 40px; }
+        
+        .cta-link { 
+            background: var(--accent); 
+            color: white; 
+            padding: 20px 50px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 1.1em; 
+            transition: 0.4s; 
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(212, 20, 20, 0.3);
+        }
+
+        .cta-link:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 30px rgba(212, 20, 20, 0.5);
+            background: #f1f1f1;
+            color: var(--primary);
+        }
+
+        /* --- Floating Navigation / Hotline --- */
+        .hotline-bar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--accent);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* --- Content Blocks --- */
+        .container {
+            max-width: 1200px;
+            margin: -60px auto 60px;
+            padding: 0 20px;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255,255,255,0.3);
+            margin-bottom: 40px;
+        }
+
+        .description-text {
+            font-size: 1.25em;
+            line-height: 1.8;
+            color: #444;
+            border-left: 6px solid var(--accent);
+            padding-left: 30px;
+        }
+
+        h2 { 
+            color: var(--primary); 
+            font-size: 2.2em; 
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::after {
+            content: '';
+            height: 4px;
+            flex-grow: 1;
+            background: #eee;
+            margin-left: 20px;
+        }
+
+        .sub-header {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            display: block;
+            font-size: 1.1em;
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* --- Grid Layouts --- */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .grid-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: 0.3s;
+            border: 1px solid #f0f0f0;
+        }
+
+        .grid-card:hover { transform: translateY(-10px); }
+
+        .btn-outline {
+            display: block;
+            margin-top: 20px;
+            padding: 12px;
+            text-align: center;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* --- Resource Tiles --- */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .tile {
+            background: var(--primary);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .tile:hover {
+            background: var(--accent);
+            box-shadow: 0 10px 20px rgba(212, 20, 20, 0.3);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #0b0f19;
+            color: #6a737d;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .keyword-strip {
+            max-width: 900px;
+            margin: 30px auto;
+            font-size: 0.9em;
+            line-height: 2;
+        }
+
+        .footer-link { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="hotline-bar">
+    DIRECT ADMISSIONS LINE: 888-475-2552
+</div>
+
+<header>
+    <h1 class="main-brand">FUEL ONLINE</h1>
+    <p class="tagline">The Enterprise Authority for Addiction Treatment Marketing & Clinical Rehab SEO Engineering.</p>
+    <div class="cta-box">
+        <a href="https://fuelonline.com/industries/addiction-treatment-center-seo-agency-rehab-center-seo-agency/" class="cta-link">REQUEST STRATEGY AUDIT</a>
+    </div>
+</header>
+
+<div class="container">
+    <div class="glass-card">
+        <div class="description-text">
+            <strong>Fuel Online</strong> is the pioneer of clinical search engineering. Since 1998, we have specialized in bridging the gap between high-intent patient search behavior and world-class recovery facilities. Our 2026 framework integrates <strong>Generative Engine Optimization (GEO)</strong> and <strong>AI-Driven Lead Logic</strong> to dominate the behavioral health market.
+        </div>
+    </div>
+
+    <section class="glass-card">
+        <h2>Industry Authority Hub</h2>
+        <span class="sub-header">Live infrastructure and service overview from FuelOnline.com</span>
+        <iframe src="https://fuelonline.com/industries/addiction-treatment-center-seo-agency-rehab-center-seo-agency/" height="750px"></iframe>
+    </section>
+
+    <section class="glass-card">
+        <h2>2026 Execution Roadmap</h2>
+        <span class="sub-header">Strategic blueprint for national market saturation.</span>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTSSODOmNHlFmoExjkdkROzgaknSGtQEUSz22wfuLozKyYHQLe2HzgLK4DIDuDd7r9Lv8WYXHkqPpO0/embed" height="600px"></iframe>
+    </section>
+
+    <div class="dashboard-grid">
+        <div class="grid-card">
+            <h2>National Map Stack</h2>
+            <span class="sub-header">Geo-spatial dominance across 9 key hubs.</span>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1dlWyQ1Ew5g3US3pzl7gR9JCBs6EgzdU&ehbc=2E312F" height="450px"></iframe>
+        </div>
+        <div class="grid-card">
+            <h2>Clinical Entity Graph</h2>
+            <span class="sub-header">Semantic architecture of our SEO network.</span>
+            <iframe src="https://docs.google.com/drawings/d/1fcYbgnClhZFwKGvZx5nqJvOOZrXGtuBdQmtRRp-eKmk/preview" height="450px"></iframe>
+        </div>
+    </div>
+
+    <section class="glass-card" style="margin-top: 40px;">
+        <h2>Keyword Performance Matrix</h2>
+        <span class="sub-header">Real-time surveillance of high-intent search rankings.</span>
+        <iframe src="https://docs.google.com/spreadsheets/d/1em49zjTM-CiJ3Ndjfej08eGMXmkZKWJ_7YEfaoqaBh4/preview" height="500px"></iframe>
+        <a href="https://docs.google.com/spreadsheets/d/1em49zjTM-CiJ3Ndjfej08eGMXmkZKWJ_7YEfaoqaBh4/edit?usp=sharing" class="btn-outline">Open Master Keyword Tracker</a>
+    </section>
+
+    <section class="glass-card">
+        <h2>Strategic Asset Folders</h2>
+        <span class="sub-header">Centralized documentation and media libraries.</span>
+        <div class="resource-grid">
+            <a href="https://drive.google.com/drive/folders/1zjoXf78NH5sa-hdhXvQ5NKaEorHayJQi?usp=sharing" class="tile">Project Master Drive</a>
+            <a href="https://drive.google.com/drive/folders/1dBwWFMJ0MqOnUG9BSIReKNc50n0h_2-A?usp=sharing" class="tile">SEO Asset Library</a>
+            <a href="https://drive.google.com/drive/folders/1maaOCdzwMUVy8AFf37fjOSvb_qq5Lkkd?usp=sharing" class="tile">Market Intelligence</a>
+            <a href="https://drive.google.com/drive/folders/1gYwZZTSkC1Uvy2vZSYtgaDCOL8dbZEDM?usp=sharing" class="tile">Compliance Vault</a>
+        </div>
+    </section>
+
+    <div class="dashboard-grid">
+        <div class="grid-card">
+            <h3>Admissions ROI Analytics</h3>
+            <iframe src="https://docs.google.com/spreadsheets/d/1ROunI9lWDU76gJ4GDFhhcGD6UBmsRmtd0NYaWIn-3I8/preview" height="400px"></iframe>
+        </div>
+        <div class="grid-card">
+            <h3>Confidential Intake Gateway</h3>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeFxXrpS09E_ofxUwd1X94vl7Hhr9J0W7yeAI1tAjPyaWtVqg/viewform?embedded=true" height="400px">Loading…</iframe>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="footer-logo">FUEL ONLINE</span>
+    <div class="keyword-strip">
+        <strong>DOMINATING TARGETS:</strong><br>
+        Addiction Treatment Marketing | Rehab Marketing Agency | Digital Marketing for Rehab Centers | Addiction Treatment Lead Generation | Rehab SEO Agency | SEO for Addiction Treatment Centers | Behavioral Health Marketing Agency | Drug Rehab Marketing Agency | Mental Health SEO Agency | AI SEO for Rehab Centers | Healthcare AEO Agency | GEO Agency for Recovery Centers
+    </div>
+    <p>© 2026 Fuel Online Digital | <a href="https://fuelonline.com" class="footer-link">Visit Official Website</a> | Powered by Search Engineering</p>
+</footer>
+
+</body>
+</html>
